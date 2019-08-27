@@ -1,5 +1,7 @@
 #! /bin/sh
 
+apt -y install git
+
 git clone https://github.com/Nitrux/tools
 
 export PATH="$PATH:$(pwd)/tools"
