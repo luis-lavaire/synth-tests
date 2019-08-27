@@ -1,5 +1,6 @@
 #! /bin/sh
 
+apt -y update
 apt -y install git
 
 git clone https://github.com/Nitrux/tools
