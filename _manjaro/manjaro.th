@@ -1,0 +1,15 @@
+# -- Manjaro minimal image.
+
+# All the bootloader-related
+# entries need that some package
+# provide the files for them.
+# Not providing these entries
+# results on an unbootable ISO
+# image; but, for the sake of
+# testing, I will just ignore that.
+
+SYSTEM.BASE	jonathonf/manjaro
+
+SYSTEM.PACKAGE_MANAGER pacman
+SYSTEM.PACKAGES
+	zsync

@@ -1,0 +1,5 @@
+# -- This is a minimal image.
+
+SYSTEM.BASE alpine
+SYSTEM.PACKAGE_MANAGER apk
+
