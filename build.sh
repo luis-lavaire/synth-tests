@@ -1,11 +1,17 @@
 #! /bin/sh
 
-apt -y update
-apt -y install git
+# -- Install dependencies.
+
+pacman --noconfirm -Syu \
+	git \
+	curl \
+	jq
 
 git clone https://github.com/Nitrux/tools
-
 export PATH="$PATH:$(pwd)/tools"
+
+
+# -- Generate the images.
 
 for d in _*; do
 
