@@ -5,7 +5,8 @@
 pacman --noconfirm -Syu \
 	git \
 	curl \
-	jq
+	jq \
+	sed
 
 git clone https://github.com/Nitrux/tools
 export PATH="$PATH:$(pwd)/tools"
