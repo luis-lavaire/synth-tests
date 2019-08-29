@@ -8,8 +8,11 @@
 # image; but, for the sake of
 # testing, I will just ignore that.
 
-SYSTEM.BASE	jonathonf/manjaro
-
+SYSTEM.BASE jonathonf/manjaro
 SYSTEM.PACKAGE_MANAGER pacman
+
 SYSTEM.PACKAGES
-	zsync
+	base-devel,
+	zsync,
+	git,
+	curl
