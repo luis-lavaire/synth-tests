@@ -19,9 +19,13 @@ for d in _*; do
 
 	echo -e "\n\e[32m :: GENERATING '$d'.\e[0m\n"
 
-	(
-		cd $d
-		synth *
-		ls
-	)
+	sudo synth $d/*.th $d/out.ISO
+
+	echo " ==> In $(pwd):"
+	ls -l .
+	echo " ===>"
+
+	echo " ==> In $d:"
+	ls -l $d
+	echo " ===>"
 done
