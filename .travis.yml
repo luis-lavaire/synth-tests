@@ -1,7 +1,7 @@
 sudo: required
 
 script:
-  - sudo docker run --rm -v $(pwd)/:/build/ -w /build/ ubuntu:latest /bin/sh sudo ./build.sh
+  - sudo docker run --rm -v $(pwd)/:/build/ -w /build/ ubuntu:latest /bin/sh ./build.sh
 
 branches:
   except:

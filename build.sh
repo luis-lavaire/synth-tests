@@ -15,7 +15,7 @@ for d in oss/*/; do
 
 	echo -e "\n\e[32m :: GENERATING '$d'.\e[0m\n"
 
-	sudo synth $d/*.th $d/out.ISO
+	synth $d/*.th $d/out.ISO
 
 	echo " ==> In $(pwd):"
 	ls -l .
