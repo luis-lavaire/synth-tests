@@ -2,7 +2,9 @@
 
 # -- Install dependencies.
 
-pacman --noconfirm -Syu \
+apt-get update -yy
+
+apt-get install -yy \
 	git \
 	curl \
 	jq \
