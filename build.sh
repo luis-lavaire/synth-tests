@@ -11,7 +11,7 @@ export PATH="$PATH:$(pwd)/tools"
 
 # -- Generate the images.
 
-for d in oss; do
+for d in oss/*/; do
 
 	echo -e "\n\e[32m :: GENERATING '$d'.\e[0m\n"
 
