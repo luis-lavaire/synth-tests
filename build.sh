@@ -2,8 +2,8 @@
 
 # -- Install dependencies.
 
-sudo apt-get update -yy
-sudo apt-get install git curl jq build-essential
+apt-get update -yy
+apt-get install git curl jq build-essential
 
 git clone https://github.com/Nitrux/tools
 export PATH="$PATH:$(pwd)/tools"
