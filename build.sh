@@ -2,14 +2,8 @@
 
 # -- Install dependencies.
 
-apt-get update -yy
-
-apt-get install -yy \
-	git \
-	curl \
-	jq \
-	tar \
-	base-devel
+sudo apt-get update -yy
+sudo apt-get install git curl jq build-essential
 
 git clone https://github.com/Nitrux/tools
 export PATH="$PATH:$(pwd)/tools"
@@ -17,7 +11,7 @@ export PATH="$PATH:$(pwd)/tools"
 
 # -- Generate the images.
 
-for d in _*; do
+for d in oss; do
 
 	echo -e "\n\e[32m :: GENERATING '$d'.\e[0m\n"
 

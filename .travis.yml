@@ -1,11 +1,7 @@
 sudo: required
 
 script:
-  - sudo docker run --rm -v $(pwd)/:/build/ -w /build/ ubuntu /bin/sh build.sh
-
-#after_success:
-#  - wget -q https://github.com/probonopd/uploadtool/raw/master/upload.sh
-#  - bash upload.sh out/*
+  - sudo docker run --rm -v $(pwd)/:/build/ -w /build/ ubuntu:latest /bin/sh sudo ./build.sh
 
 branches:
   except:

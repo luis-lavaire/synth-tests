@@ -1,0 +1,3 @@
+SYSTEM.BASE @URL:http://cdimages.ubuntu.com/ubuntu-base/daily/current/eoan-base-amd64.tar.gz
+SYSTEM.PACKAGE_MANAGER apt
+SYSTEM.UPDATES_URL http://foo/updates
