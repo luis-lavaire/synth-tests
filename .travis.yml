@@ -1,7 +1,9 @@
 sudo: required
 
 script:
-  - sudo docker run --rm -v $(pwd)/:/build/ -w /build/ ubuntu:latest /bin/sh ./build.sh
+  - sudo apt-get update -yy
+  - sudo apt-get instatll -yy git curl tar jq build-essential
+  - sudo ./build.sh
 
 branches:
   except:
