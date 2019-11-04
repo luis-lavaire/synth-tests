@@ -1,18 +1,24 @@
-# -- Manjaro minimal image.
+BASE
+	jonathonf/manjaro
 
-# All the bootloader-related
-# entries need that some package
-# provide the files for them.
-# Not providing these entries
-# results on an unbootable ISO
-# image; but, for the sake of
-# testing, I will just ignore that.
-
-SYSTEM.BASE jonathonf/manjaro
-SYSTEM.PACKAGE_MANAGER pacman
+PACKAGE_MANAGER
+	pacman
 
 SYSTEM.PACKAGES
-	base-devel,
-	zsync,
-	git,
+
+	#   Add the kernel here.
+
+	base-devel  ,
+	zsync       ,
+	git         ,
 	curl
+
+UPDATE_URL
+	http://repo.nxos.org/BRANCH/the.iso
+
+
+INITRAMFS
+
+
+KERNELS
+	/boot/
