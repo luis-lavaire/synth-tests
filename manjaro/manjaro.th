@@ -4,7 +4,7 @@ BASE
 PACKAGE_MANAGER
 	pacman
 
-SYSTEM.PACKAGES
+PACKAGES
 	linux419    ,
 	base-devel  ,
 	zsync       ,
