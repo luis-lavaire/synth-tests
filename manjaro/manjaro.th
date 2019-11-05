@@ -5,9 +5,7 @@ PACKAGE_MANAGER
 	pacman
 
 SYSTEM.PACKAGES
-
-	#   Add the kernel here.
-
+	linux419    ,
 	base-devel  ,
 	zsync       ,
 	git         ,
