@@ -4,5 +4,5 @@ BASE
 PACKAGE_MANAGER
 	apt
 
-UPDATES_URL
+UPDATE_URL
 	http://foo/updates
