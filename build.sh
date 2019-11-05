@@ -1,14 +1,21 @@
 #! /bin/sh
 
-# -- Install the build tools.
+
+#   Install dependencies.
+
+apt-get update -yy
+apt-get install -yy git curl tar jq build-essential grub-efi-amd64-bin
+
+
+#   Install the build tools.
 
 git clone https://github.com/Nitrux/tools
 export PATH="$PATH:$(pwd)/tools"
 
 
-# -- Generate the images.
+#   Generate the images.
 
-for d in oss/*/; do
+for d in *; do
 
 	echo -e "\n\e[32m :: GENERATING '$d'.\e[0m\n"
 

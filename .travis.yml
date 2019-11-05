@@ -1,8 +1,6 @@
 sudo: required
 
 script:
-  - sudo apt-get update -yy
-  - sudo apt-get instatll -yy git curl tar jq build-essential
   - sudo ./build.sh
 
 branches:
