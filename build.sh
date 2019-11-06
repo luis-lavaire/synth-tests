@@ -4,8 +4,8 @@ set -e
 
 #   Install dependencies.
 
-apt-get update -yy
-apt-get install -yy \
+apt-get -q -y update
+apt-get -q -y install \
 	git \
 	curl \
 	tar \
@@ -23,19 +23,11 @@ export PATH="$PATH:$(pwd)/tools"
 
 #   Generate the images.
 
-for d in *; do
+for i in */*.th; do
 
 	echo
-	echo -e "\e[32m ---- GENERATING '$d' ----\e[0m"
+	echo -e "\e[34m ---- GENERATING '$d' ----\e[0m"
 	echo
 
-	synth $d/*.th
-
-	echo " ==> In $(pwd):"
-	ls -l .
-	echo " ===>"
-
-	echo " ==> In $d:"
-	ls -l $d
-	echo " ===>"
+	synth $i
 done
