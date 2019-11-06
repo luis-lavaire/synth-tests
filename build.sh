@@ -12,7 +12,8 @@ apt-get -q -y install \
 	jq \
 	build-essential \
 	grub-efi-amd64-bin \
-	mtools
+	mtools \
+	xorriso
 
 
 #   Install the build tools.
