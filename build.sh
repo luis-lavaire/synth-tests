@@ -1,10 +1,18 @@
 #! /bin/sh
 
+set -e
 
 #   Install dependencies.
 
 apt-get update -yy
-apt-get install -yy git curl tar jq build-essential grub-efi-amd64-bin
+apt-get install -yy \
+	git \
+	curl \
+	tar \
+	jq \
+	build-essential \
+	grub-efi-amd64-bin \
+	mtools
 
 
 #   Install the build tools.
@@ -17,9 +25,11 @@ export PATH="$PATH:$(pwd)/tools"
 
 for d in *; do
 
-	echo -e "\n\e[32m :: GENERATING '$d'.\e[0m\n"
+	echo
+	echo -e "\e[32m ---- GENERATING '$d' ----\e[0m"
+	echo
 
-	synth $d/*.th $d/out.ISO
+	synth $d/*.th
 
 	echo " ==> In $(pwd):"
 	ls -l .
