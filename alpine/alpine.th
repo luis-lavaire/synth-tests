@@ -1,5 +1,0 @@
-BASE
-	alpine
-
-PACKAGE_MANAGER
-	apk

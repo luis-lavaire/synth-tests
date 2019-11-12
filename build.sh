@@ -24,11 +24,4 @@ export PATH="$PATH:$(pwd)/tools"
 
 #   Generate the images.
 
-for i in */*.th; do
-
-	echo
-	echo -e "\e[34m ---- GENERATING '$d' ----\e[0m"
-	echo
-
-	synth $i
-done
+synth manjaro.th
