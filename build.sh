@@ -1,8 +1,7 @@
 #! /bin/sh
 
-set -e
 
-#   Install dependencies.
+#   install dependencies.
 
 apt-get -q -y update
 apt-get -q -y install \
@@ -16,12 +15,17 @@ apt-get -q -y install \
 	xorriso
 
 
-#   Install the build tools.
+#   install the build tools.
 
 git clone https://github.com/Nitrux/tools
 export PATH="$PATH:$(pwd)/tools"
 
 
-#   Generate the images.
+#   generate the images.
 
-synth manjaro.th
+synth *.sy && {
+	set -- *.iso
+	for f in "$@"; do
+		curl -F="$f" "https://transfer.sh"
+	done
+}

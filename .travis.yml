@@ -1,11 +1,5 @@
-sudo: required
-
 script:
   - sudo ./build.sh
-
-branches:
-  except:
-  - "/^(?i:continuous.*)$/"
 
 notifications:
   email: false

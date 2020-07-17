@@ -1,0 +1,3 @@
+BASE			archlinux/base
+PACKAGE_MANAGER	pacman
+PACKAGES		xfce4
