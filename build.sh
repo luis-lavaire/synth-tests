@@ -24,8 +24,7 @@ export PATH="$PATH:$(pwd)/tools"
 #   generate the images.
 
 synth *.sy && {
-	set -- *.iso
-	for f in "$@"; do
+	for f in *.iso; do
 		curl -F="$f" "https://transfer.sh"
 	done
 }
